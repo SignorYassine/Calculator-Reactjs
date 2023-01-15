@@ -1,14 +1,18 @@
+.flex{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-.thecalc{
-  margin: auto;
+
+
+.thecalc{ 
   background-color: #19b6bb;
   width: 295px;
-  height: 325px;
-  text-align: center;
+  height: 378px;
   border-radius: 4px;
 
-  
-  
 }
 input{
   outline: 0;
@@ -32,7 +36,7 @@ input{
 }
 
 
-#clear{
+#del{
   float: left;
   position: relative;
   display: block;
@@ -56,6 +60,24 @@ input{
   background-color: #f1faeb;
 }
 
+
+#clear{
+  width: 270px;
+  font-size: 26px;
+  text-align: center;
+  background-color: #fce0ab;
+  float: left;
+}
+
+#clear:hover{
+  width: 270px;
+  font-size: 26px;
+  text-align: center;
+  box-shadow: 0 4px rgba(0,0,0,0.2);
+  background-color: #fce0abcb;
+}
+
+
 input:hover{
   border: 0 solid #000;
   color: #495069;
@@ -74,7 +96,7 @@ input:hover{
   box-shadow: 0 4px #b7c259;
 }
 
-#clear:hover{
+#del:hover{
   float: left;
   display: block;
   background-color: #f297a0;

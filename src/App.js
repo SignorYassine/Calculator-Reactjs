@@ -13,13 +13,18 @@ function App() {
     setAfficher(eval(afficher))
   }
 
+  const del = () =>{
+    setAfficher(afficher.slice(0, -1))
+  }
+
 
 
 
   const show = (
-    <div>
+    <div className="flex">
       <div className="thecalc">     
       <input type="text" name="input" size="16" value={afficher} id="answer"/>
+      <input type="button" id="clear" name="clear" value=" C " onClick={event=>{setAfficher("")}}/>
         <input type="button" name="one" value="1" onClick={Display}/>
         <input type="button" name="two" value="2" onClick={Display}/>
         <input type="button" name="three" value="3" onClick={Display}/>
@@ -35,7 +40,8 @@ function App() {
         <input type="button" name="nine" value="9" onClick={Display}/> 
         <input type="button" className="operator" name="times" value="*" onClick={Display}/>
         <br/>
-        <input type="button" id="clear" name="clear" value=" C " onClick={event=>{setAfficher("")}}/>
+        
+        <input type="button" id="del" name="del" value=" <- " onClick={del}/>
         <input type="button" name="zero" value="0" onClick={Display}/>
         <input type="button" name="doit" value=" = " onClick={calculat}/>
         <input type="button" className="operator" name="div" value="/" onClick={Display}/>
